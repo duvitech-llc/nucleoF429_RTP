@@ -23,6 +23,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "udpecho_raw.h"
 #include "logging.h"
 #include <stdio.h>
 
@@ -408,6 +409,7 @@ void StartDefaultTask(void const * argument)
   /* init code for LWIP */
   MX_LWIP_Init();
   /* USER CODE BEGIN 5 */
+  udpecho_raw_init();
   /* Infinite loop */
   for(;;)
   {

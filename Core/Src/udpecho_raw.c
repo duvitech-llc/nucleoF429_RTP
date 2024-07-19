@@ -62,6 +62,7 @@ udpecho_raw_recv(void *arg, struct udp_pcb *upcb, struct pbuf *p,
 {
   LWIP_UNUSED_ARG(arg);
   if (p != NULL) {
+	// HAL_GPIO_TogglePin(LD1_GPIO_Port, LD1_Pin);
     /* send received packet back to sender */
     udp_sendto(upcb, p, addr, port);
     /* free the pbuf */
